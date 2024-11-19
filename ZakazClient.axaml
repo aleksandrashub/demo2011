@@ -1,0 +1,94 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="demo1111.ZakazClient"
+        Title="ZakazClient">
+	<Grid
+	   RowDefinitions="100,500,400">
+		<StackPanel
+			Grid.Row="1">
+			<Button
+				Click="vyhod_Click"
+				Content="К каталогу">
+				</Button>
+			<ListBox
+				Name="listBox"
+				SelectionChanged="ListBox_SelectionChanged">
+				<ListBox.ItemTemplate>
+					<DataTemplate
+						x:CompileBindings="False">
+						<Grid
+							ColumnDefinitions="150,300,100, 200">
+							<StackPanel
+								Grid.Column="0">
+								<Image
+									Height="100"
+									Width="100"
+									Source="{Binding IdProdNavigation.bitmap}">
+								</Image>
+							</StackPanel>
+							<StackPanel
+								Grid.Column="1">
+								<TextBlock
+									Text="{Binding IdProdNavigation.NameProd}"
+									Width="200"
+									TextWrapping="Wrap">
+								</TextBlock>
+								<TextBlock
+									Text="{Binding IdProdNavigation.Descr}"
+									Width="200"
+									TextWrapping="Wrap">
+								</TextBlock>
+								<TextBlock
+									Text="{Binding IdManufNavigation.Manuf}"
+									Width="200"
+									TextWrapping="Wrap">
+								</TextBlock>
+								<TextBlock
+										Text="{Binding IdProdNavigation.ItogCost}"
+										Width="200"
+										TextWrapping="Wrap">
+								</TextBlock>
+							</StackPanel>
+							<StackPanel
+								Grid.Column="2">
+								<TextBlock
+									Text="{Binding IdProdNavigation.CurrDisc}"
+									Width="200"
+									TextWrapping="Wrap">
+								</TextBlock>
+							</StackPanel>
+							<StackPanel
+								Orientation="Horizontal"
+								Grid.Column="3">
+								<Button
+									HorizontalAlignment="Center"
+									Tag="{Binding IdProd}"
+									Height="20"
+									Width="20"
+									Content="-"
+									Click="min_Click">
+								</Button>
+								<TextBlock
+									Text="{Binding Amount}"
+									Width="30"
+									Name="Amount">
+								</TextBlock>
+								<Button
+									HorizontalAlignment="Center"
+									Tag="{Binding IdProd}"
+									Height="20"
+									Width="20"
+									Content="+"
+									Click="plus_Click">
+								</Button>
+							</StackPanel>
+						</Grid>
+					</DataTemplate>
+				</ListBox.ItemTemplate>
+			</ListBox>
+		</StackPanel>
+	</Grid>
+</Window>

@@ -1,0 +1,122 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="demo1111.AddEditProd"
+        Title="AddEditProd">
+	<Grid
+		ColumnDefinitions="220,200,100">
+		<StackPanel
+			Orientation="Vertical"
+			Grid.Column="0">
+			<TextBlock
+				Text="Наименование товара">
+			</TextBlock>
+			<TextBox
+				HorizontalAlignment="Left"
+				 Name="NameTxt"
+				Height="30"
+				Width="200">
+			</TextBox>
+			<TextBlock
+			  Text="Артикул товара">
+			</TextBlock>
+			<TextBox
+				HorizontalAlignment="Left"
+				Name="articulTxt"
+				Height="30"
+				Width="200">
+			</TextBox>
+			<TextBlock
+			  Text="Выберите единицы измерения">
+			</TextBlock>
+			<ComboBox
+				Name="edizmCmb">
+			</ComboBox>
+			<TextBlock
+			 Text="Стоимость">
+			</TextBlock>
+			<TextBox
+				HorizontalAlignment="Left"
+				Name="costTxt"
+				Height="30"
+				Width="100">
+			</TextBox>
+			<TextBlock
+			 Text="Размер максимальной скидки">
+			</TextBlock>
+			<TextBox
+				HorizontalAlignment="Left"
+				Name="maxdiscTxt"
+				Height="30"
+				Width="100">
+			</TextBox>
+			<TextBlock
+			 Text="Размер текущей скидки">
+			</TextBlock>
+			<TextBox
+				HorizontalAlignment="Left"
+				Name="currdiscTxt"
+				Height="30"
+				Width="100">
+			</TextBox>
+			<TextBlock
+			 Text="Описание">
+			</TextBlock>
+			<TextBox
+				TextWrapping="Wrap"
+				HorizontalAlignment="Left"
+				Name="descrTxt"
+				Height="60"
+				Width="200">
+			</TextBox>
+		</StackPanel>
+		<StackPanel
+			Grid.Column="1">
+			<TextBlock
+				Text="Выберите производителя">
+			</TextBlock>
+			<ComboBox
+				Name="manufCmb">
+			</ComboBox>
+			<TextBlock
+			   Text="Выберите поставщика">
+			</TextBlock>
+			<ComboBox
+				Name="custCmb">
+			</ComboBox>
+			<TextBlock
+			   Text="Выберите категорию">
+			</TextBlock>
+			<ComboBox
+				Name="categCmb">
+			</ComboBox>
+			<TextBlock
+			 Text="Количество на складе">
+			</TextBlock>
+			<TextBox
+				HorizontalAlignment="Left"
+				Name="quanTxt"
+				Height="30"
+				Width="100">
+			</TextBox>
+			<Button
+				Click="img_Click"
+				Content="Выбрать изображение">
+			</Button>
+			<Image
+				Name="imgOut"
+				Height="150"
+				Width="150">
+			</Image>
+		</StackPanel>
+		<StackPanel
+			Grid.Column="0">
+			<Button
+				Click="Ok_Click"
+				Content="Готово">
+				</Button>
+			</StackPanel>
+	</Grid>
+</Window>

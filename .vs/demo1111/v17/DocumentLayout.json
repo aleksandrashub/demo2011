@@ -1,0 +1,170 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HP\\source\\repos\\demo1111\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{676074FA-2053-4F52-9280-7CBC7AB7C67B}|demo1111.csproj|c:\\users\\hp\\source\\repos\\demo1111\\showzakazs.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{676074FA-2053-4F52-9280-7CBC7AB7C67B}|demo1111.csproj|solutionrelative:showzakazs.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{676074FA-2053-4F52-9280-7CBC7AB7C67B}|demo1111.csproj|c:\\users\\hp\\source\\repos\\demo1111\\catalog.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{676074FA-2053-4F52-9280-7CBC7AB7C67B}|demo1111.csproj|solutionrelative:catalog.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{676074FA-2053-4F52-9280-7CBC7AB7C67B}|demo1111.csproj|c:\\users\\hp\\source\\repos\\demo1111\\showzakazs.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{676074FA-2053-4F52-9280-7CBC7AB7C67B}|demo1111.csproj|solutionrelative:showzakazs.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{676074FA-2053-4F52-9280-7CBC7AB7C67B}|demo1111.csproj|c:\\users\\hp\\source\\repos\\demo1111\\catalog.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{676074FA-2053-4F52-9280-7CBC7AB7C67B}|demo1111.csproj|solutionrelative:catalog.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{676074FA-2053-4F52-9280-7CBC7AB7C67B}|demo1111.csproj|c:\\users\\hp\\source\\repos\\demo1111\\addeditprod.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{676074FA-2053-4F52-9280-7CBC7AB7C67B}|demo1111.csproj|solutionrelative:addeditprod.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{676074FA-2053-4F52-9280-7CBC7AB7C67B}|demo1111.csproj|c:\\users\\hp\\source\\repos\\demo1111\\addeditprod.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{676074FA-2053-4F52-9280-7CBC7AB7C67B}|demo1111.csproj|solutionrelative:addeditprod.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{676074FA-2053-4F52-9280-7CBC7AB7C67B}|demo1111.csproj|c:\\users\\hp\\source\\repos\\demo1111\\models\\prod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{676074FA-2053-4F52-9280-7CBC7AB7C67B}|demo1111.csproj|solutionrelative:models\\prod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{676074FA-2053-4F52-9280-7CBC7AB7C67B}|demo1111.csproj|c:\\users\\hp\\source\\repos\\demo1111\\zakazclient.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{676074FA-2053-4F52-9280-7CBC7AB7C67B}|demo1111.csproj|solutionrelative:zakazclient.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{676074FA-2053-4F52-9280-7CBC7AB7C67B}|demo1111.csproj|c:\\users\\hp\\source\\repos\\demo1111\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{676074FA-2053-4F52-9280-7CBC7AB7C67B}|demo1111.csproj|solutionrelative:mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Prod.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\demo1111\\Models\\Prod.cs",
+              "RelativeDocumentMoniker": "Models\\Prod.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\demo1111\\Models\\Prod.cs",
+              "RelativeToolTip": "Models\\Prod.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAkwAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T18:11:42.91Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ShowZakazs.axaml",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\demo1111\\ShowZakazs.axaml",
+              "RelativeDocumentMoniker": "ShowZakazs.axaml",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\demo1111\\ShowZakazs.axaml",
+              "RelativeToolTip": "ShowZakazs.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-19T18:07:31.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ShowZakazs.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\demo1111\\ShowZakazs.axaml.cs",
+              "RelativeDocumentMoniker": "ShowZakazs.axaml.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\demo1111\\ShowZakazs.axaml.cs",
+              "RelativeToolTip": "ShowZakazs.axaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T18:07:30.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Catalog.axaml",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\demo1111\\Catalog.axaml",
+              "RelativeDocumentMoniker": "Catalog.axaml",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\demo1111\\Catalog.axaml",
+              "RelativeToolTip": "Catalog.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-19T17:58:02.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Catalog.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\demo1111\\Catalog.axaml.cs",
+              "RelativeDocumentMoniker": "Catalog.axaml.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\demo1111\\Catalog.axaml.cs",
+              "RelativeToolTip": "Catalog.axaml.cs",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAAALsAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T17:34:57.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddEditProd.axaml",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\demo1111\\AddEditProd.axaml",
+              "RelativeDocumentMoniker": "AddEditProd.axaml",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\demo1111\\AddEditProd.axaml",
+              "RelativeToolTip": "AddEditProd.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-19T16:48:51.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddEditProd.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\demo1111\\AddEditProd.axaml.cs",
+              "RelativeDocumentMoniker": "AddEditProd.axaml.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\demo1111\\AddEditProd.axaml.cs",
+              "RelativeToolTip": "AddEditProd.axaml.cs",
+              "ViewState": "AgIAAMIAAAAAAAAAAAAAwOEAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T16:48:51.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ZakazClient.axaml",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\demo1111\\ZakazClient.axaml",
+              "RelativeDocumentMoniker": "ZakazClient.axaml",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\demo1111\\ZakazClient.axaml",
+              "RelativeToolTip": "ZakazClient.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-19T14:48:07.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainWindow.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\demo1111\\MainWindow.axaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.axaml.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\demo1111\\MainWindow.axaml.cs",
+              "RelativeToolTip": "MainWindow.axaml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACkAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T16:31:35.256Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

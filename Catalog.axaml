@@ -1,0 +1,164 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="demo1111.Catalog"
+        Title="Catalog">
+	<ScrollViewer>
+		<Grid
+	  ColumnDefinitions="200,200,200,*"
+	  RowDefinitions="200, 500,*">
+			<StackPanel
+				Grid.Column="0"
+				Grid.Row="0">
+				<Button
+					Click="ZakazClient_Click"
+					Width="100"
+					Name="toZakazBtn"
+					Content="Перейти к заказу">
+				</Button>
+				<TextBlock
+					Text="Сортировка">
+				</TextBlock>
+				<ComboBox
+					SelectionChanged="Sort_SelectionChanged"
+					Name="sort">
+					<ComboBoxItem>
+						Стоимость по возрастанию
+					</ComboBoxItem>
+					<ComboBoxItem>
+						Стоимость по убыванию
+					</ComboBoxItem>
+					<ComboBoxItem>
+						Снять сортировку
+					</ComboBoxItem>
+				</ComboBox>
+			</StackPanel>
+			<StackPanel
+		 Grid.Column="1"
+		 Grid.Row="0">
+				<TextBlock
+					Text="Фильтрация">
+				</TextBlock>
+				<ComboBox
+					SelectionChanged="Filter_SelectionChanged"
+					Name=" filter">
+					<ComboBoxItem>
+						0-9,99%
+					</ComboBoxItem>
+					<ComboBoxItem>
+						10-14,99%
+					</ComboBoxItem>
+					<ComboBoxItem>
+						15% и более
+					</ComboBoxItem>
+					<ComboBoxItem>
+						Все диапазоны
+					</ComboBoxItem>
+				</ComboBox>
+			</StackPanel>
+			<StackPanel
+				Grid.Column="2"
+				Grid.Row="0">
+				<TextBlock
+					Text="Поиск">
+				</TextBlock>
+				<TextBox
+					Name="poisk"
+					KeyUp="Poisk_KeyUp"
+					Width="200">
+				</TextBox>
+			</StackPanel>
+			<StackPanel
+				HorizontalAlignment="Right"
+				Orientation="Horizontal"
+				Grid.Column="3">
+				<TextBlock
+					TextWrapping="Wrap"
+					Name="fioClient">
+				</TextBlock>
+				<Button
+					Click="vyhod_Click"
+					Content="Выход в окно авторизации">
+				</Button>
+			</StackPanel>
+			<StackPanel
+				Grid.Column="0"
+				Grid.ColumnSpan="3"
+				Grid.Row="1">
+				<ListBox
+					Height="500"
+					Width="700"
+					Name="listbox">
+					<ListBox.ItemTemplate>
+						<DataTemplate
+							x:CompileBindings="False">
+							<ScrollViewer>
+								<Grid
+									ColumnDefinitions="150,300,150">
+									<StackPanel
+										Grid.Column="0">
+										<Image
+											Source="{Binding bitmap}"
+											Height="100"
+											Width="100">
+										</Image>
+									</StackPanel>
+									<StackPanel
+										Grid.Column="1">
+										<TextBlock
+											Text="{Binding Name}">
+										</TextBlock>
+										<TextBlock
+										   Text="{Binding Descr}">
+										</TextBlock>
+										<TextBlock
+										   Text="{Binding IdManNavigation.Manuf1}">
+										</TextBlock>
+										<StackPanel
+											Orientation="Horizontal">
+											<TextBlock
+												IsVisible="{Binding CostVisible}"
+												TextDecorations="Strikethrough"
+											  Text="{Binding Cost}">
+											</TextBlock>
+											<TextBlock
+										   Text=" ">
+											</TextBlock>
+											<TextBlock
+											Text="{Binding ItogCost}">
+											</TextBlock>
+										</StackPanel>
+									</StackPanel>
+								</Grid>
+							</ScrollViewer>
+						</DataTemplate>
+					</ListBox.ItemTemplate>
+					<ListBox.ContextMenu>
+						<ContextMenu>
+							<MenuItem
+								Header="Добавить в заказ"
+								Click="MenuItem_Click">
+							</MenuItem>
+						</ContextMenu>
+					</ListBox.ContextMenu>
+				</ListBox>
+			</StackPanel>
+			<StackPanel
+				Grid.Column="0">
+				<Button
+					Name="addBtn"
+					Click="AddNew_Click"
+					Content="Добавить новый товар">
+					</Button>
+				<Button
+					Name="showZakazs"
+					Click="showZakazs_Click"
+					Content="Добавить новый товар">
+				</Button>
+				</StackPanel>
+		</Grid>
+	</ScrollViewer>
+</Window>
+
