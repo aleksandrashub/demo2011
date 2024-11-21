@@ -5,30 +5,65 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="demo1111.ShowZakazs"
         Title="ShowZakazs">
-	<Grid>
-        <StackPanel>
+	<Grid
+		RowDefinitions="100,*">
+        <StackPanel
+			Grid.Row="0">
 			<Button
 				Width="120"
 				Content="К каталогу"
 				Click="vyhod_Click">
 				</Button>
+			</StackPanel>
+		<StackPanel
+			Grid.Row="1">
 			<ListBox
+				Height="500"
 				Width="700"
 				Name="listZ">
 				<ListBox.ItemTemplate>
-					<DataTemplate>
-						<StackPanel
-							Orientation="Vertical">
-							<!--<TextBlock
-								Text="{Binding IdZakaz}">
-							</TextBlock>
-							<DatePicker>
-								</DatePicker>-->
-						</StackPanel>
+					<DataTemplate
+						x:CompileBindings="False">
+						<Grid
+							ColumnDefinitions="100,400,100">
+							<StackPanel
+								Grid.Column="0"
+								Orientation="Vertical">
+								<TextBlock
+									Text="{Binding IdZakaz}">
+								</TextBlock>
+								<StackPanel
+									Orientation="Horizontal">
+									<TextBlock
+										Text="Дата оформления заказа">
+									</TextBlock>
+									<TextBlock
+										Text="{Binding DateCr}">
+									</TextBlock>
+								</StackPanel>
+								<StackPanel
+									Orientation="Horizontal">
+									<TextBlock
+										Text="Дата доставки заказа">
+									</TextBlock>
+									<TextBlock
+										Text="{Binding DateDeliver}">
+									</TextBlock>
+								</StackPanel>
+								<StackPanel
+									Orientation="Horizontal">
+									<TextBlock
+										Text="Общая стоимость заказа">
+									</TextBlock>
+									<TextBlock
+										Text="{Binding TotalCost}">
+									</TextBlock>
+								</StackPanel>
+							</StackPanel>
+						</Grid>
 					</DataTemplate>
 				</ListBox.ItemTemplate>
-				</ListBox>
-			</StackPanel>
-
+			</ListBox>
+		</StackPanel>
 	</Grid>
 </Window>

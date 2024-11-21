@@ -173,3 +173,4 @@ C:\Users\HP\source\repos\demo1111\bin\Debug\net8.0\runtimes\browser\lib\net8.0\S
 C:\Users\HP\source\repos\demo1111\obj\Debug\net8.0\demo1111.csproj.Up2Date
 C:\Users\HP\source\repos\demo1111\obj\Debug\net8.0\demo1111.genruntimeconfig.cache
 C:\Users\HP\source\repos\demo1111\obj\Debug\net8.0\ref\demo1111.dll
+C:\Users\HP\source\repos\demo1111\obj\Debug\net8.0\demo1111.sourcelink.json

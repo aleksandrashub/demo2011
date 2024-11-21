@@ -13,31 +13,41 @@ namespace demo1111;
 public partial class Catalog : Window
 {
     public List<Prod> prods = Helper.mycontext.Prods.Include(x => x.IdManufNavigation).ToList();
-   
     public Catalog()
     {
         InitializeComponent();
         updateList();
-        if (Helper.currUser.IdRole == 1)
+        if (Helper.role == 1)
         {
+            showZakazs.IsVisible = true;
             addBtn.IsVisible = true;
+        }
+        else if (Helper.role==2)
+        {
+            showZakazs.IsVisible = false;
+            addBtn.IsVisible = false;
         }
         else
         {
+            showZakazs.IsVisible = false;
             addBtn.IsVisible = false;
         }
         if (Helper.isGuest == false)
         {
             fioClient.Text = Helper.currUser.Surname + " " + Helper.currUser.Name + " " + Helper.currUser.Lastname;
         }
-        if (Helper.zakaz.ZakazProds.Count() > 0)
+        if (Helper.zakaz != null)
         {
-            toZakazBtn.IsVisible = true;
+            if (Helper.zakaz.ZakazProds.Count() > 0)
+            {
+                toZakazBtn.IsVisible = true;
+            }
+            else
+            {
+                toZakazBtn.IsVisible = false;
+            }
         }
-        else
-        {
-            toZakazBtn.IsVisible = false;
-        }
+        
        
     }
 
@@ -56,7 +66,6 @@ public partial class Catalog : Window
             case 2:
             default:
                 break;
-
         }
 
         switch (filter.SelectedIndex)
@@ -83,18 +92,13 @@ public partial class Catalog : Window
         string[] values = new string[count];
         values = searchText.Split(new char[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
 
-        foreach (string s in values)
-        {
-            if (!string.IsNullOrEmpty(s))
+       if (!string.IsNullOrEmpty(searchText))
             {
-                currProds = prods.Where(x => x.NameProd.Contains(s)).ToList();
+                currProds = prods.Where(x => x.NameProd.ToLower().Contains(searchText)).ToList();
 
             }
-            else
-            {
-                continue;
-            }
-        }
+            
+        
         listbox.ItemsSource = currProds;
     }
 
@@ -165,9 +169,20 @@ public partial class Catalog : Window
         mainWindow.Show();
         this.Close();
         Helper.prodsZakaz.Clear();
-        Helper.mycontext.Zakazs.Remove(Helper.zakaz);
-        Helper.mycontext.SaveChanges();
-        Helper.zakaz = null;
+        if (Helper.zakaz != null)
+        {
+            Helper.zakaz.ZakazProds.Clear();
+            if (Helper.mycontext.Zakazs.Contains(Helper.zakaz))
+            {
+                Helper.mycontext.ZakazProds.RemoveRange(Helper.zakaz.ZakazProds);
+                Helper.mycontext.Zakazs.Remove(Helper.zakaz);
+            }
+
+            Helper.mycontext.SaveChanges();
+
+        }
+        
+        Helper.zakaz=new Zakaz();
         Helper.currUser = null;
         Helper.role = -1;
     }

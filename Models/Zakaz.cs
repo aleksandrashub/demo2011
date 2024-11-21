@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace demo1111.Models;
 
@@ -26,4 +27,5 @@ public partial class Zakaz
     public virtual Status? IdStatusNavigation { get; set; }
 
     public virtual ICollection<ZakazProd> ZakazProds { get; set; } = new List<ZakazProd>();
+    public float TotalCost => ZakazProds.Sum(x => x.IdProdNavigation.ItogCost).Value;
 }

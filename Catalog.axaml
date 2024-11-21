@@ -96,6 +96,7 @@
 							x:CompileBindings="False">
 							<ScrollViewer>
 								<Grid
+									Background="{Binding color}"
 									ColumnDefinitions="150,300,150">
 									<StackPanel
 										Grid.Column="0">
@@ -144,20 +145,17 @@
 						</ContextMenu>
 					</ListBox.ContextMenu>
 				</ListBox>
-			</StackPanel>
-			<StackPanel
-				Grid.Column="0">
 				<Button
 					Name="addBtn"
 					Click="AddNew_Click"
 					Content="Добавить новый товар">
-					</Button>
+				</Button>
 				<Button
 					Name="showZakazs"
 					Click="showZakazs_Click"
-					Content="Добавить новый товар">
+					Content="Просмотр заказов">
 				</Button>
-				</StackPanel>
+			</StackPanel>
 		</Grid>
 	</ScrollViewer>
 </Window>

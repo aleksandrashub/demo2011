@@ -1,4 +1,5 @@
-﻿using Avalonia.Media.Imaging;
+﻿using Avalonia.Media;
+using Avalonia.Media.Imaging;
 using System;
 using System.Collections.Generic;
 
@@ -45,4 +46,5 @@ public partial class Prod
 
     public bool CostVisible => CurrDisc != 0 ? true : false;
     public float? ItogCost => Cost - (Cost * CurrDisc / 100);
+    public string color => CurrDisc > 15? "#7fff00" : "White";
 }

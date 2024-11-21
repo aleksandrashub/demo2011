@@ -28,6 +28,9 @@ public partial class AddEditProd : Window
     {
         InitializeComponent();
         edizmCmb.ItemsSource = edizmBind;
+        manufCmb.ItemsSource = manuf;
+        custCmb.ItemsSource = custs;
+        categCmb.ItemsSource = categ;
     }
     public AddEditProd(Prod prod)
     {
@@ -36,7 +39,19 @@ public partial class AddEditProd : Window
         imgOut.Source = prod.bitmap;
         NameTxt.Text = prod.NameProd;
         descrTxt.Text = prod.Descr;
-        product = prod;
+        manufCmb.ItemsSource = manuf;
+        custCmb.ItemsSource = custs;
+        categCmb.ItemsSource = categ;
+        manufCmb.SelectedItem = prod.IdManufNavigation.Manuf;
+        custCmb.SelectedItem = prod.IdCustNavigation.Customer1;
+        categCmb.SelectedItem = prod.IdCategNavigation.Categ;
+        articulTxt.Text = prod.Articul;
+        edizmCmb.SelectedItem = prod.IdEdIzmNavigation.EdIzm1;
+        costTxt.Text = prod.Cost.ToString();
+        maxdiscTxt.Text = prod.MaxDisc.ToString();
+        currdiscTxt.Text = prod.CurrDisc.ToString();
+        quanTxt.Text = prod.QuanSkl.ToString();
+            product = prod;
     }
 
     private async void img_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
@@ -51,9 +66,7 @@ public partial class AddEditProd : Window
         }
         imgOut.Source = bitmap;
         filename = System.IO.Path.GetFileName(path);
-        destPath = AppDomain.CurrentDomain.BaseDirectory.ToString() + "Assets";
-        
-
+        destPath = (AppDomain.CurrentDomain.BaseDirectory + "Assets").ToString();
     }
 
     private void Ok_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
@@ -62,11 +75,13 @@ public partial class AddEditProd : Window
         switch (product)
         {
             case null:
+                product = new Prod();
                 product.IdProd = Helper.mycontext.Prods.OrderBy(x => x.IdProd).LastOrDefault().IdProd;
                 product.IdProd += 1;
                 if (filename != null)
                 {
                     product.Image = filename;
+                    File.Move(path, destPath+ "\\" + filename);
                 }
                 else
                 {
@@ -77,6 +92,7 @@ public partial class AddEditProd : Window
                 
                 if (filename != null)
                 {
+                    File.Move(path, destPath + "\\" + filename);
                     product.Image = filename;
                 }
                 else
@@ -112,7 +128,6 @@ public partial class AddEditProd : Window
             var msg = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Выберите производителя");
             msg.ShowAsync();
         }
-        if (custCmb.SelectedIndex != -1)
             if (custCmb.SelectedIndex != -1)
             {
                 product.IdCustNavigation = Helper.mycontext.Customers.Where(x => x.Customer1 == custCmb.SelectedValue.ToString()).FirstOrDefault();
@@ -126,12 +141,10 @@ public partial class AddEditProd : Window
                 var msg = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Выберите поставщика");
                 msg.ShowAsync();
             }
-        if (categCmb.SelectedIndex != -1)
             if (categCmb.SelectedIndex != -1)
             {
                 product.IdCategNavigation = Helper.mycontext.Categories.Where(x => x.Categ == categCmb.SelectedValue.ToString()).FirstOrDefault();
                 product.IdCateg = Helper.mycontext.Categories.Where(x => x.Categ == categCmb.SelectedValue.ToString()).FirstOrDefault().IdCateg;
-
 
             }
             else
@@ -141,7 +154,7 @@ public partial class AddEditProd : Window
                 msg.ShowAsync();
             }
         int quan;
-        if (quanTxt.Text.Length > 0 && Int32.TryParse(quanTxt.Text, out quan))
+        if (quanTxt.Text != null && Int32.TryParse(quanTxt.Text, out quan))
         {
             product.QuanSkl = quan;
         }
@@ -152,7 +165,7 @@ public partial class AddEditProd : Window
             msg.ShowAsync();
         }
         float maxD;
-        if (maxdiscTxt.Text.Length > 0 && float.TryParse(maxdiscTxt.Text, out maxD))
+        if (maxdiscTxt.Text != null && float.TryParse(maxdiscTxt.Text, out maxD))
         {
             product.MaxDisc = maxD;
         }
@@ -163,7 +176,7 @@ public partial class AddEditProd : Window
             msg.ShowAsync();
         }
         float currD;
-        if (currdiscTxt.Text.Length > 0 && float.TryParse(currdiscTxt.Text, out currD))
+        if (currdiscTxt.Text != null && float.TryParse(currdiscTxt.Text, out currD))
         {
             product.CurrDisc = currD;
         }
@@ -175,7 +188,7 @@ public partial class AddEditProd : Window
 
         }
         int cost;
-        if (costTxt.Text.Length > 0 && Int32.TryParse(costTxt.Text, out cost))
+        if (costTxt.Text != null && Int32.TryParse(costTxt.Text, out cost))
         {
             product.Cost = cost;
         }
@@ -185,7 +198,7 @@ public partial class AddEditProd : Window
             msg.ShowAsync();
             check = false;
         }
-        if (descrTxt.Text.Length > 0)
+        if (descrTxt.Text != null)
         {
             product.Descr = descrTxt.Text;
 
@@ -196,7 +209,7 @@ public partial class AddEditProd : Window
             var msg = MessageBoxManager.GetMessageBoxStandard("Ошибка", "Проверьте поле описания");
             msg.ShowAsync();
         }
-        if (articulTxt.Text.Length > 0)
+        if (articulTxt.Text != null)
         {
             product.Articul = articulTxt.Text;
         }
@@ -213,17 +226,20 @@ public partial class AddEditProd : Window
 
             Helper.mycontext.Prods.Add(product);
             Helper.mycontext.SaveChanges();
-        
+            Catalog catalog = new Catalog();
+            catalog.Show();
+            this.Close();
         
         
         }
-
-
-
-
     }
 
-    
+    private void vyhod_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    {
+        Catalog catalog = new Catalog();
+        catalog.Show();
+        this.Close();
+    }
 }
 
 
